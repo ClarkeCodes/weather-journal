@@ -1,10 +1,6 @@
-// Setup empty JS object to act as endpoint for all routes
+/* setup global variables and initialize express */
 let projectData = {};
-
-// Express to run server and routes
 const express = require('express');
-
-// Start up an instance of app
 const app = express();
 
 /* Dependencies */
@@ -44,4 +40,19 @@ app.post('/post', addData);
 // Callback function for POST request
 function addData(req, res) {
     projectData.push(req.body);
+}
+
+// Post route for adding new entry to journal
+app.post('/addEntry', addEntry);
+
+function addEntry(req, res) {
+    
+    const newEntry = {
+        temp: req.body.temp,
+        date: req.body.date,
+        input: req.body.input
+    };
+    projectData.push(newEntry);
+    res.send(newEntry);
+    console.log(projectData);
 }

@@ -52,7 +52,8 @@ function addEntry(req, res) {
         date: req.body.date,
         input: req.body.input
     };
-    projectData.push(newEntry);
+    // projectData.push(newEntry);
+    projectData = newEntry;
     res.send(newEntry);
     console.log(projectData);
 }

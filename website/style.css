@@ -1,14 +1,17 @@
-body{
+body {
     background: #fffff8;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-#app{
+#app {
     display: grid;
     grid-auto-rows: minmax(150px, auto);
     /* grid-template-columns:  */
     height:100vh;
-    background: #f23557;
+    /* background: #f23557; */
+    background-image: url("img/clouds.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #f0d43a;
     justify-content: center;
     grid-gap: 1em;
@@ -16,7 +19,7 @@ body{
     font-family: 'Oswald', sans-serif;
 }
 
-.holder{
+.holder {
 
 }
 
@@ -24,26 +27,26 @@ body{
     background: rgba(59, 74, 107, .4);
 }
 
-#entryHolder{
+#entryHolder {
 
 }
 
-#date{
+#date {
 
 }
 
-#temp{
+#temp {
 
 }
 
-#content{
+#content {
 
 }
 
 .headline {
 
 }
-.title{
+.title {
 
 }
 

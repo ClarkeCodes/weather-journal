@@ -48,6 +48,7 @@ const getData = async(baseURL, zip, key) => {
 
 /* Function to POST data */
 const postData = async(url = '', data = {}) => {
+    console.log("URL:" + url);
     const response = await fetch(url, {
         method: 'POST',
         credentials: 'same-origin',
@@ -56,7 +57,12 @@ const postData = async(url = '', data = {}) => {
         },
         body: JSON.stringify(data),
     });
-
+    try {
+        const newData = await response.json();
+        return newData;
+    } catch(error) {
+        console.log("error", error);
+    }
 
 }
 

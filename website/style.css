@@ -1,29 +1,48 @@
 body {
     background: #fffff8;
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    margin: 0;
+    background-image: url("img/sky.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #app {
     display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
-    height:100vh;
-    /* background: #f23557; */
-    background-image: url("img/clouds.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-columns: 1fr;
+    height: 100%;
     color: #f0d43a;
-    justify-content: center;
     grid-gap: 1em;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
+    margin: 0 auto;
+    width: 70%;
 }
 
 .holder {
-
+    padding: 2rem;
+    margin: 0;
+    /* margin: 0 auto; */
 }
 
-.entry{
+.holder.feel {
+    display: flex;
+    flex-direction: column;
+}
+
+/* .holder.zip {
+    padding-top: 7rem;
+} */
+
+#box {
+    margin-top: 8rem;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 4px 5px 17px 6px rgba(59, 74, 107, .4);
+}
+
+.entry {
     background: rgba(59, 74, 107, .4);
 }
 
@@ -44,15 +63,20 @@ body {
 }
 
 .headline {
-
+    background-color: rgba(59, 74, 107, .4);
+    width: 100%;
+    position: absolute;
+    left: 0;
+    padding: 2rem;
+    /* display: flex; */
 }
 .title {
 
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
-label{
-    display:block;
+label {
+    display: block;
     font-size: 27px;
 }
 
@@ -60,8 +84,10 @@ input {
     display:block;
     height: 60px;
     width: 320px;
-    background:#22b2da;
+    /* background:#ffffffa1; */
+    background: #e9e9e9c2;
     color: #f0d43a;
+    /* color: black; */
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
     border: none;
@@ -83,8 +109,9 @@ h1 {
 }
 
 textarea{
-    background:#22b2da;
-    color: #f0d43a;
+    background:#ffffffa1;
+    color: black;
+    /* color: #f0d43a; */
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
 }
@@ -97,7 +124,8 @@ button:focus {
 }
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
-    color: #f0d43a; 
+    /* color: #f0d43a;  */
+    color: black;
     font-family: 'Oswald', sans-serif;
 
 } 

@@ -24,6 +24,8 @@
 footer {
     grid-area: ft;
     text-align: center;
+    font-size: 17px;
+    color: #454545;
 }
 
 
@@ -37,6 +39,10 @@ footer {
         ". main ."
         ". main ."
         "ft ft ft"
+    }
+
+    #box {
+        margin: 0;
     }
 
 }

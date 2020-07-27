@@ -9,13 +9,26 @@ let today = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
 
 
 // Event listener to add function to existing HTML DOM element
-document.getElementById('generate').addEventListener('click', getInput);
+document.getElementById('generate').addEventListener('click', verifyZip);
+
+// Validate the zipcode user entered
+function verifyZip(zip) {
+    zip = document.getElementById('zip').value;
+    if (zip.length != 5) {
+        console.log(zip.length);
+        alert('Please enter a 5 digit zip code');
+        return;
+    }
+    else if (isNaN(parseInt(zip))){
+        alert('Please enter your numeric zip code only')
+        return;
+    }
+    getInput(zip);
+}
 
 /* Function called by event listener */
-function getInput(event) {
-    zip = document.getElementById('zip').value;   
+function getInput(zip) {
     input = document.getElementById('feelings').value;
-
     getData(baseURL, zip, apiKey)
     .then(function(data) {
         // add data to POST request
@@ -59,10 +72,13 @@ const updateUI = async() => {
     const request = await fetch('/all');
     try {
         const allData = await request.json();
-        console.log(allData);
-        document.getElementById('date').innerHTML = allData.date;
-        document.getElementById('temp').innerHTML = allData.temp;
-        document.getElementById('content').innerHTML = allData.input;
+        // make journal entry visible
+        document.getElementById('journal-entry').classList.remove('hidden');
+
+        // update values for journal entry
+        document.getElementById('date').innerHTML = "<strong>Date:</strong> " + allData.date;
+        document.getElementById('temp').innerHTML = "<strong>Temperature:</strong> " + allData.temp;
+        document.getElementById('content').innerHTML = "<strong>Journal entry:</strong> " + allData.input;
     }
     catch(error) {
         console.log("Error: ", error);

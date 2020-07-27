@@ -34,14 +34,6 @@ function sendData(req, res) {
     res.send(projectData);
 }
 
-// Post Route
-app.post('/post', addData);
-
-// Callback function for POST request
-function addData(req, res) {
-    projectData.push(req.body);
-}
-
 // Post route for adding new entry to journal
 app.post('/addEntry', addEntry);
 
@@ -54,5 +46,4 @@ function addEntry(req, res) {
     };
     projectData = newEntry;
     res.send(projectData);
-    console.log(projectData);
 }

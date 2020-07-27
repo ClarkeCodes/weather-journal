@@ -42,10 +42,6 @@ body {
     background: rgba(59, 74, 107, .4);
 }
 
-#entryHolder {
-
-}
-
 #journal-entry {
     background-color: rgb(168 168 168 / 41%);
     margin: 1rem;
@@ -53,18 +49,6 @@ body {
 
 .hidden {
     display: none;
-}
-
-#date {
-
-}
-
-#temp {
-
-}
-
-#content {
-
 }
 
 .headline {
@@ -93,8 +77,6 @@ label {
 input {
     display: block;
     height: 60px;
-    /* width: 50%; */
-    /* background: #e9e9e9c2; */
     background-color: #e7edefc4;
     color: black;
     font-size: 20px;
@@ -113,6 +95,7 @@ button {
     box-shadow: 2px 4px 10px 1px #afafafc2;
     cursor: pointer;
     margin-top: 1rem;
+    align-self: center;
 }
 h1 {
     font-size: 36px;
@@ -121,8 +104,6 @@ h1 {
 textarea{
     background:#e7edefc4;
     resize: none;
-    /* rows: "5"; */
-    /* cols: "20"; */
     color: black;
     font-size: 20px;
     font-family: 'Lato', sans-serif;

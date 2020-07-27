@@ -1,6 +1,6 @@
 // Personal API Key for OpenWeatherMap API
-let baseURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
-let apiKey = "&appid=9517c4ced3838c35339020d493d089bd&units=imperial";
+const baseURL = "http://api.openweathermap.org/data/2.5/weather?zip=";
+const apiKey = "&appid=9517c4ced3838c35339020d493d089bd&units=imperial";
 let input, zip, url = '';
 
 // setup new date
@@ -77,7 +77,7 @@ const updateUI = async() => {
 
         // update values for journal entry
         document.getElementById('date').innerHTML = "<strong>Date:</strong> " + allData.date;
-        document.getElementById('temp').innerHTML = "<strong>Temperature:</strong> " + allData.temp;
+        document.getElementById('temp').innerHTML = "<strong>Temperature:</strong> " + allData.temp + " &deg;F";
         document.getElementById('content').innerHTML = "<strong>Journal entry:</strong> " + allData.input;
     }
     catch(error) {
